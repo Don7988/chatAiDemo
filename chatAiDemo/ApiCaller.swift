@@ -15,7 +15,7 @@ final class ApiCaller{
     
     @frozen enum constants{
         
-        static let key = "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"
+        static let key = "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"
     }
     
     private init(){}
@@ -33,6 +33,8 @@ final class ApiCaller{
             switch result{
             
             case.success(let model):
+                
+                print(String(describing: model.choices))
             
                 let output = model.choices.first?.text ?? ""
                 
